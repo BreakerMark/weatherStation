@@ -49,6 +49,9 @@ koaRouter.get('/pressure', async (ctx, next) => {
       if (err) {
         reject(err);
       }
+      rows.forEach(item => {
+        item.data = item.data / 1000
+      })
       resolve(rows);
     })
   })
@@ -71,4 +74,4 @@ koaRouter.get('/altitude', async (ctx, next) => {
 app.use(koaRouter.routes());
 app.use(koaRouter.allowedMethods());
 
-app.listen(5000, () => {});
+app.listen(5000, () => { });

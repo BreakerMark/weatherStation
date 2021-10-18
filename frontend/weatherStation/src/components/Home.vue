@@ -75,7 +75,7 @@ export default {
           url = 'humidity'
           break;
         case '3':
-          unit = 'Pa'
+          unit = 'kPa'
           url = 'pressure'
           break;
         case '4':
