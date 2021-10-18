@@ -1,5 +1,5 @@
 cd sensor
-nohup python3 readSensor.py &
+pm2 start "python3 readSensor.py"
 echo "sensor reader start success"
 cd ../backend
 pm2 start app.js
